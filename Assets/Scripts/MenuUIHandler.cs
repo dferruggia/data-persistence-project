@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 /* 
@@ -13,18 +16,18 @@ using UnityEngine.UIElements;
  */
 public class MenuUIHandler : MonoBehaviour
 {
-    public TextMeshPro NameInputField;
+    public TMP_InputField NameInputField;
     public GameObject StartButton;
 
     public void ChangeName()
     {
-        Button button = StartButton.GetComponent<Button>();
+        UnityEngine.UI.Button button = StartButton.GetComponent<UnityEngine.UI.Button>();
         if (NameInputField.text == null || NameInputField.text == "") {
-            button.SetEnabled(false);
+            button.interactable = false;
         } else
         {
             GameManager.Instance.SetCurrentPlayerName(NameInputField.text);
-            button.SetEnabled(true);
+            button.interactable = true;
         }
     }
 

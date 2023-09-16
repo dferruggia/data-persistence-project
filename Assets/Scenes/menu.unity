@@ -782,7 +782,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1236159752}
+        m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+        m_MethodName: ChangeName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1459,7 +1471,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1070482768}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1236159752}
+        m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+        m_MethodName: StartNew
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1070482768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1725,8 +1749,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87cf154ce23304b46994336dd66c31c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NameInputField: {fileID: 0}
+  NameInputField: {fileID: 664672655}
   StartButton: {fileID: 1070482765}
+  TextInputField: {fileID: 72319322}
 --- !u!1 &1428013360
 GameObject:
   m_ObjectHideFlags: 0
