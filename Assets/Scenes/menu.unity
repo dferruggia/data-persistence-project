@@ -1750,8 +1750,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameInputField: {fileID: 664672655}
+  HighScoreBanner: {fileID: 1428013362}
   StartButton: {fileID: 1070482765}
-  TextInputField: {fileID: 72319322}
 --- !u!1 &1428013360
 GameObject:
   m_ObjectHideFlags: 0

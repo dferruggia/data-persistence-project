@@ -17,6 +17,7 @@ using UnityEngine.UIElements;
 public class MenuUIHandler : MonoBehaviour
 {
     public TMP_InputField NameInputField;
+    public TMP_Text HighScoreBanner;
     public GameObject StartButton;
 
     public void ChangeName()
@@ -33,12 +34,20 @@ public class MenuUIHandler : MonoBehaviour
 
     public void Exit()
     {
-        GameManager.Instance.SaveScores();
+        GameManager.Instance.SaveData();
 #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
 # else
         Application.Quit();
 #endif
+    }
+
+    public void Start()
+    {
+        GameManager.Instance.LoadData();
+        NameInputField.text = GameManager.Instance.GetCurrentPlayerName();
+        HighScoreBanner.text = GameManager.Instance.GetBestScore();
+        
     }
 
     public void StartNew()
